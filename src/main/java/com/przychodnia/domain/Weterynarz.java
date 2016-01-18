@@ -13,9 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
+
+@Entity
+@Table (name = "Weterynarz")
+@NamedQueries({ 
+	@NamedQuery(name = "weterynarz.getAll", query = "Select w from Weterynarz w")
+})
 
 public class Weterynarz 
 {
