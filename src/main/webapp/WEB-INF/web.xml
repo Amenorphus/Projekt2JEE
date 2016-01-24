@@ -16,7 +16,7 @@ id="WebApp_ID" version="2.5">
                 com.sun.jersey.config.property.packages
             </param-name>
             <param-value>
-                pl.puzniakowski.sample.jaxrs.resources
+                com.przychodnia.rest;
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
