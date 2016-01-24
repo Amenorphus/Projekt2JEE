@@ -29,8 +29,6 @@ public class Weterynarz
 	private Long id;
 	private String imie;
 	private String nazwisko;
-	
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Zwierze> zwierzes;
 	
 	@Id
@@ -56,6 +54,7 @@ public class Weterynarz
 		this.nazwisko = nazwisko;
 	}
 	
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	public List<Zwierze> getZwierzes() {
 		return zwierzes;
 	}
