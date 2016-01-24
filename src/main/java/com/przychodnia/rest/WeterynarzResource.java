@@ -1,4 +1,4 @@
-package com.przychodnia.api;
+package com.przychodnia.rest;
 
 import com.przychodnia.dao.WeterynarzDAO;
 import com.przychodnia.domain.Weterynarz;
