@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.example</groupId>
-	<artifactId>jee6demo</artifactId>
+	<groupId>com.przychodnia</groupId>
+	<artifactId>przychodnia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
@@ -12,8 +12,6 @@
 	</properties>
 
 	<repositories>
-		<!-- Several key Java EE APIs and RIs are missing from the Maven Central 
-			Repository -->
 		<repository>
 			<id>jboss-public-repository-group</id>
 			<name>JBoss Public Maven Repository Group</name>
@@ -44,7 +42,6 @@
 		</repository>
 	</repositories>
 
-	<!-- RichFaces Bill of Materials -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -56,7 +53,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<!-- End RichFaces BOM -->
 
 	<dependencies>
 		<dependency>
@@ -65,15 +61,12 @@
 			<version>6.0</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.9</version>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- RichFaces stuff -->
 		<dependency>
 			<groupId>org.richfaces.ui</groupId>
 			<artifactId>richfaces-components-ui</artifactId>
@@ -82,17 +75,30 @@
 			<groupId>org.richfaces.core</groupId>
 			<artifactId>richfaces-core-impl</artifactId>
 		</dependency>
-		<!-- end RichFaces stuff -->
-
-		<!-- ICEFaces <dependency> <groupId>org.icefaces</groupId> <artifactId>icefaces</artifactId> 
-			<version>2.0.0</version> <exclusions> <exclusion> <groupId>com.sun.faces</groupId> 
-			<artifactId>jsf-impl</artifactId> </exclusion> </exclusions> </dependency> 
-			<dependency> <groupId>org.icepush</groupId> <artifactId>icepush</artifactId> 
-			<version>2.0.0</version> </dependency> ICEFaces stuff -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey.contribs</groupId>
+		    <artifactId>jersey-multipart</artifactId>
+		    <version>1.8</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server</artifactId>
+		    <version>1.10</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server-linking</artifactId>
+		    <version>1.10</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>jeedemo</finalName>
+		<finalName>przychodnia</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
