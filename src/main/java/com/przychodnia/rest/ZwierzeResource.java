@@ -23,7 +23,8 @@ public class ZwierzeResource
     @Path("/addZwierze")
     public Response addZwierze(@FormParam("imie") String imie,
                                 @FormParam("gatunek") String gatunek,
-                                @FormParam("dataur") Date dataur)
+                                @FormParam("dataur") Date dataur,
+    							@FormParam("weterynarz") String weterynarz)
                                 
     {
         Zwierze zwierze = new Zwierze();
