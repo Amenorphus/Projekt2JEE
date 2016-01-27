@@ -18,6 +18,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 @Table (name = "Weterynarz")
 @NamedQueries({ 
@@ -54,7 +56,8 @@ public class Weterynarz
 		this.nazwisko = nazwisko;
 	}
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "weterynarz")
+    @JsonIgnore
 	public List<Zwierze> getZwierzes() {
 		return zwierzes;
 	}
