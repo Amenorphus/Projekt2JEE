@@ -64,7 +64,7 @@ public class Zwierze
 	}
 	
 	@ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "wetId")
 	public Weterynarz getWeterynarz() {
 		return weterynarz;
 	}

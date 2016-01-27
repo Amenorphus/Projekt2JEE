@@ -1,5 +1,6 @@
 package com.przychodnia.rest;
 
+import com.przychodnia.dao.WeterynarzDAO;
 import com.przychodnia.dao.ZwierzeDAO;
 import com.przychodnia.domain.Zwierze;
 
@@ -18,6 +19,8 @@ public class ZwierzeResource
 {
 	@EJB
     private ZwierzeDAO zwierzeManager;
+	@EJB
+    private WeterynarzDAO weterynarzManager;
 
     @POST
     @Path("/addZwierze")
@@ -27,10 +30,14 @@ public class ZwierzeResource
     							@FormParam("weterynarz") String weterynarz)
                                 
     {
-        Zwierze zwierze = new Zwierze();
+    	Long weterynarzId = Long.parseLong(weterynarz.substring(0, weterynarz.indexOf('.')));
+
+    	Zwierze zwierze = new Zwierze();
         zwierze.setImie(imie);
         zwierze.setGatunek(gatunek);
         zwierze.setDataur(dataur);
+        zwierze.setWeterynarz(weterynarzManager.getWeterynarzByID(weterynarzId));
+
 
         zwierzeManager.addZwierze(zwierze);
 

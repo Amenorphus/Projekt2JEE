@@ -28,7 +28,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 public class Weterynarz 
 {
-	private Long id;
+	private Long wetId;
 	private String imie;
 	private String nazwisko;
 	private List<Zwierze> zwierzes;
@@ -36,10 +36,10 @@ public class Weterynarz
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long getId() {
-		return id;
+		return wetId;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.wetId = id;
 	}
 	
 	public String getImie() {
