@@ -1,15 +1,15 @@
 $(document).ready(function() {
     $.get("/przychodnia/rest/weterynarz/getAllWeterynarzs", function (data, textStatus) {
-        var wetSelect = document.getElementById('zwierzeId');
+        var wetsel = document.getElementById('weterynarzid');
 
         for (var i in data) {
             var opt = document.createElement('option');
 
-            var weterynarzInfo = data[i].id + ". " + data[i].imie + " " +data[i].nazwisko;
+            var weterynarzInfo = data[i].id + " " + data[i].imie + " " + data[i].nazwisko;
 
             opt.value = weterynarzInfo;
             opt.innerHTML = weterynarzInfo;
-            wetSelect.appendChild(opt);
+            wetsel.appendChild(opt);
         }
     });
 });

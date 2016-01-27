@@ -19,41 +19,51 @@ $(document).ready(function()
 
             var cellDataur = document.createElement("td");
             var cellDataurText = document.createTextNode(data[i].dataur);
+            
+            var cellIm = document.createElement("td");
+            var cellImText = document.createTextNode(data[i].weterynarz.imie);
+            var cellNaz = document.createElement("td");
+            var cellNazText = document.createTextNode(data[i].weterynarz.nazwisko);
 
             cellId.appendChild(cellIdText);
             cellImie.appendChild(cellImieText);
             cellGatunek.appendChild(cellGatunekText);
             cellDataur.appendChild(cellDataurText);
+            
+            cellIm.appendChild(cellImText);
+            cellNaz.appendChild(cellNazText);
 
             var cellRead = document.createElement("td");
             var cellReadLink = document.createElement("a");
 
             cellReadLink.href = "../../przychodnia/operations/zwierze/readZwierze.html?id=" + data[i].id;
-            cellReadLink.textContent = "Read";
+            cellReadLink.textContent = "Pokaż";
             cellRead.appendChild(cellReadLink);
 
             var cellUpdate = document.createElement("td");
             var cellUpdateLink = document.createElement("a");
 
             cellUpdateLink.href = "../../przychodnia/operations/zwierze/updateZwierze.html?id=" + data[i].id;
-            cellUpdateLink.textContent = "Update";
+            cellUpdateLink.textContent = "Edytuj";
             cellUpdate.appendChild(cellUpdateLink);
 
             var cellDelete = document.createElement("td");
             var cellDeleteLink = document.createElement("a");
 
             cellDeleteLink.href = "../../przychodnia/operations/zwierze/deleteZwierze.html?id=" + data[i].id;
-            cellDeleteLink.textContent = "Delete";
+            cellDeleteLink.textContent = "Kasuj";
             cellDelete.appendChild(cellDeleteLink);
 
             row.appendChild(cellId);
             row.appendChild(cellImie);
             row.appendChild(cellGatunek);
             row.appendChild(cellDataur);
+            row.appendChild(cellIm);
+            row.appendChild(cellNaz);
             row.appendChild(cellRead);
             row.appendChild(cellUpdate);
             row.appendChild(cellDelete);
-
+            
             table.appendChild(row);
         }
     });

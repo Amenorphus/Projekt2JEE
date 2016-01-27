@@ -27,16 +27,16 @@ public class ZwierzeResource
     public Response addZwierze(@FormParam("imie") String imie,
                                 @FormParam("gatunek") String gatunek,
                                 @FormParam("dataur") Date dataur,
-    							@FormParam("weterynarz") String weterynarz)
+    							@FormParam("weterynarzid") String weterynarzid)
                                 
     {
-    	Long weterynarzId = Long.parseLong(weterynarz.substring(0, weterynarz.indexOf('.')));
+    	Long weterynarzID = Long.parseLong(weterynarzid.replaceAll("\\D+",""));
 
     	Zwierze zwierze = new Zwierze();
         zwierze.setImie(imie);
         zwierze.setGatunek(gatunek);
         zwierze.setDataur(dataur);
-        zwierze.setWeterynarz(weterynarzManager.getWeterynarzByID(weterynarzId));
+        zwierze.setWeterynarz(weterynarzManager.getWeterynarzByID(weterynarzID));
 
 
         zwierzeManager.addZwierze(zwierze);

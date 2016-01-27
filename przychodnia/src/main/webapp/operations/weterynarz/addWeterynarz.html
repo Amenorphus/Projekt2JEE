@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj weterynarza</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+</head>
+<body>
+
+
+    <form action="/przychodnia/rest/weterynarz/addWeterynarz" method="post">
+        <table class="operationtable">
+            <tr>
+                <td>Dodaj weterynarza</td>
+            </tr>
+            <tr>
+                <td>Imie:</td>
+                <td>
+                    <input type="text" name="imie" id="imie" />
+                </td>
+            </tr>
+            <tr>
+                <td>Nazwisko:</td>
+                <td>
+                    <input type="text" name="nazwisko" id="nazwisko" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value=" DODAJ "></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
