@@ -27,9 +27,13 @@ public class ZwierzeManager implements ZwierzeDAO
         em.remove(em.getReference(Zwierze.class, zwierze.getId()));
     }
 
-    public Zwierze updateZwierze(Zwierze zwierze)
+    public void updateZwierze(Zwierze zwierze)
     {
-        return (Zwierze)em.merge(zwierze);
+    	Zwierze z=(Zwierze)em.find(Zwierze.class,zwierze.getId());
+    	z.setImie(zwierze.getImie());
+    	z.setGatunek(zwierze.getGatunek());
+    	z.setDataur(zwierze.getDataur());
+    	z.setWeterynarz(zwierze.getWeterynarz());
     }
 
     public List<Zwierze> getAllZwierzes()

@@ -32,25 +32,18 @@ $(document).ready(function()
             
             cellIm.appendChild(cellImText);
             cellNaz.appendChild(cellNazText);
-
-            var cellRead = document.createElement("td");
-            var cellReadLink = document.createElement("a");
-
-            cellReadLink.href = "../../przychodnia/operations/zwierze/readZwierze.html?id=" + data[i].id;
-            cellReadLink.textContent = "Pokaż";
-            cellRead.appendChild(cellReadLink);
-
+   
             var cellUpdate = document.createElement("td");
             var cellUpdateLink = document.createElement("a");
 
-            cellUpdateLink.href = "../../przychodnia/operations/zwierze/updateZwierze.html?id=" + data[i].id;
+            cellUpdateLink.href = "../../przychodnia/operations/zwierze/editZwierze.html"
             cellUpdateLink.textContent = "Edytuj";
             cellUpdate.appendChild(cellUpdateLink);
 
             var cellDelete = document.createElement("td");
             var cellDeleteLink = document.createElement("a");
 
-            cellDeleteLink.href = "../../przychodnia/operations/zwierze/deleteZwierze.html?id=" + data[i].id;
+            cellDeleteLink.href = "../../przychodnia/operations/zwierze/deleteZwierze.html"
             cellDeleteLink.textContent = "Kasuj";
             cellDelete.appendChild(cellDeleteLink);
 
@@ -60,7 +53,6 @@ $(document).ready(function()
             row.appendChild(cellDataur);
             row.appendChild(cellIm);
             row.appendChild(cellNaz);
-            row.appendChild(cellRead);
             row.appendChild(cellUpdate);
             row.appendChild(cellDelete);
             

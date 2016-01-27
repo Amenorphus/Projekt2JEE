@@ -60,16 +60,19 @@ public class ZwierzeResource
 
     @POST
     @Path("/updateZwierze")
-    public Response updateZwierze(@FormParam("idZwierze") long idZwierze,
+    public Response updateZwierze(@FormParam("zid") long idZwierze,
                                    @FormParam("imie") String imie,
                                    @FormParam("gatunek") String gatunek,
-                                   @FormParam("gatunek") Date dataur)
-                                 
+                                   @FormParam("dataur") Date dataur,
+    							   @FormParam("weterynarzid") String wid)
     {
-        Zwierze zwierze = new Zwierze();
+    	Long weterynarzID = Long.parseLong(wid.replaceAll("\\D+",""));
+    	
+    	Zwierze zwierze = zwierzeManager.getZwierzeByID(idZwierze);
         zwierze.setImie(imie);
         zwierze.setGatunek(gatunek);
         zwierze.setDataur(dataur);
+        zwierze.setWeterynarz(weterynarzManager.getWeterynarzByID(weterynarzID));
         zwierzeManager.updateZwierze(zwierze);
 
         return Response.status(Response.Status.OK).build();
@@ -77,7 +80,7 @@ public class ZwierzeResource
 
     @POST
     @Path("/deleteZwierze")
-    public Response deleteZwierze(@FormParam("idZwierze") long idZwierze)
+    public Response deleteZwierze(@FormParam("idKas") long idZwierze)
     {
         Zwierze zwierze = new Zwierze();
         zwierze.setId(idZwierze);

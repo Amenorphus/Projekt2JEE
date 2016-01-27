@@ -22,17 +22,11 @@ $(document).ready(function()
             cellImie.appendChild(cellImieText);
             cellNazwisko.appendChild(cellNazwiskoText);
 
-            var cellRead = document.createElement("td");
-            var cellReadLink = document.createElement("a");
-
-            cellReadLink.href = "../../przychodnia/operations/weterynarz/readWeterynarz.html?id=" + data[i].wetId;
-            cellReadLink.textContent = "Pokaż";
-            cellRead.appendChild(cellReadLink);
-
+           
             var cellUpdate = document.createElement("td");
             var cellUpdateLink = document.createElement("a");
 
-            cellUpdateLink.href = "../../przychodnia/operations/weterynarz/updateWeterynarz.html?id=" + data[i].wetId;
+            cellUpdateLink.href = "../../przychodnia/operations/weterynarz/updateWeterynarz.html"
             cellUpdateLink.textContent = "Edytuj";
             cellUpdate.appendChild(cellUpdateLink);
 
@@ -46,7 +40,6 @@ $(document).ready(function()
             row.appendChild(cellId);
             row.appendChild(cellImie);
             row.appendChild(cellNazwisko);
-            row.appendChild(cellRead);
             row.appendChild(cellUpdate);
             row.appendChild(cellDelete);
 

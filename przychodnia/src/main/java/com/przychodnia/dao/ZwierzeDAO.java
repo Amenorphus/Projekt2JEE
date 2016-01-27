@@ -8,7 +8,7 @@ public interface ZwierzeDAO
 {
 	Zwierze addZwierze(Zwierze zwierze);
     void deleteZwierze(Zwierze zwierze);
-    Zwierze updateZwierze(Zwierze zwierze);
+    void updateZwierze(Zwierze zwierze);
     List<Zwierze> getAllZwierzes();
     Zwierze getZwierzeByID(Long id);
 }

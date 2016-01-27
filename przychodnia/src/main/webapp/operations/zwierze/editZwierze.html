@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj zwierze</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="../../js/zwierze/editZwierze.js"></script>
+</head>
+<body>
+
+
+    <form action="/przychodnia/rest/zwierze/updateZwierze" method="post">
+        <table class="operationtable">
+            <tr>
+                <td>Edytuj zwierze</td>
+            </tr>
+            <tr>
+                <td>Id:</td>
+                <td>
+                    <input type="text" name="zid" id="zid" />
+                </td>
+            </tr>
+            <tr>
+                <td>Imie:</td>
+                <td>
+                    <input type="text" name="imie" id="imie" />
+                </td>
+            </tr>
+            <tr>
+                <td>Gatunek:</td>
+                <td>
+                    <input type="text" name="gatunek" id="gatunek" />
+                </td>
+            </tr>
+            <tr>
+                <td>Data urodzenia:</td>
+                <td>
+                    <input type="text" name="dataur" id="dataur" />
+                </td>
+            </tr>
+            <tr>
+                <td>Weterynarz:</td>
+                <td>
+                    <select name="weterynarzid" id="weterynarzid">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value=" DODAJ "></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

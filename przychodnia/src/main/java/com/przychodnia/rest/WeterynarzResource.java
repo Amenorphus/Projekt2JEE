@@ -67,7 +67,7 @@ public class WeterynarzResource
 
     @POST
     @Path("/deleteWeterynarz")
-    public Response deleteWeterynarz(@FormParam("idWeterynarz") long idWeterynarz)
+    public Response deleteWeterynarz(@FormParam("idKasW") long idWeterynarz)
     {
         Weterynarz weterynarz = new Weterynarz();
         weterynarz.setId(idWeterynarz);
