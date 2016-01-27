@@ -39,7 +39,7 @@ $(document).ready(function()
             var cellDelete = document.createElement("td");
             var cellDeleteLink = document.createElement("a");
 
-            cellDeleteLink.href = "../../przychodnia/operations/weterynarz/deleteWeterynarz.html?id=" + data[i].wetId;
+            cellDeleteLink.href = "../../przychodnia/operations/weterynarz/deleteWeterynarz.html"
             cellDeleteLink.textContent = "Kasuj";
             cellDelete.appendChild(cellDeleteLink);
 
