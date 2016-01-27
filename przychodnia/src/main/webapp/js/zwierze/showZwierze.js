@@ -28,21 +28,21 @@ $(document).ready(function()
             var cellRead = document.createElement("td");
             var cellReadLink = document.createElement("a");
 
-            cellReadLink.href = "../../przychodnia/operations/movie/readZwierze.html?id=" + data[i].idMovie;
+            cellReadLink.href = "../../przychodnia/operations/zwierze/readZwierze.html?id=" + data[i].id;
             cellReadLink.textContent = "Read";
             cellRead.appendChild(cellReadLink);
 
             var cellUpdate = document.createElement("td");
             var cellUpdateLink = document.createElement("a");
 
-            cellUpdateLink.href = "../../przychodnia/operations/movie/updateZwierze.html?id=" + data[i].idMovie;
+            cellUpdateLink.href = "../../przychodnia/operations/zwierze/updateZwierze.html?id=" + data[i].id;
             cellUpdateLink.textContent = "Update";
             cellUpdate.appendChild(cellUpdateLink);
 
             var cellDelete = document.createElement("td");
             var cellDeleteLink = document.createElement("a");
 
-            cellDeleteLink.href = "../../przychodnia/operations/movie/deleteZwierze.html?id=" + data[i].idMovie;
+            cellDeleteLink.href = "../../przychodnia/operations/zwierze/deleteZwierze.html?id=" + data[i].id;
             cellDeleteLink.textContent = "Delete";
             cellDelete.appendChild(cellDeleteLink);
 
