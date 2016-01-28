@@ -2,6 +2,7 @@ package com.przychodnia.service;
 
 import com.przychodnia.dao.WeterynarzDAO;
 import com.przychodnia.domain.Weterynarz;
+import com.przychodnia.domain.Zwierze;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -27,9 +28,12 @@ public class WeterynarzManager implements WeterynarzDAO
         em.remove(em.getReference(Weterynarz.class, weterynarz.getId()));
     }
 
-    public Weterynarz updateWeterynarz(Weterynarz weterynarz)
+    public void updateWeterynarz(Weterynarz weterynarz)
     {
-        return (Weterynarz)em.merge(weterynarz);
+        
+    	Weterynarz w=(Weterynarz)em.find(Weterynarz.class,weterynarz.getId());
+    	w.setImie(weterynarz.getImie());
+    	w.setNazwisko(weterynarz.getNazwisko());
     }
 
     public List<Weterynarz> getAllWeterynarzs()

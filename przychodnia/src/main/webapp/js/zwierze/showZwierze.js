@@ -32,20 +32,6 @@ $(document).ready(function()
             
             cellIm.appendChild(cellImText);
             cellNaz.appendChild(cellNazText);
-   
-            var cellUpdate = document.createElement("td");
-            var cellUpdateLink = document.createElement("a");
-
-            cellUpdateLink.href = "../../przychodnia/operations/zwierze/editZwierze.html"
-            cellUpdateLink.textContent = "Edytuj";
-            cellUpdate.appendChild(cellUpdateLink);
-
-            var cellDelete = document.createElement("td");
-            var cellDeleteLink = document.createElement("a");
-
-            cellDeleteLink.href = "../../przychodnia/operations/zwierze/deleteZwierze.html"
-            cellDeleteLink.textContent = "Kasuj";
-            cellDelete.appendChild(cellDeleteLink);
 
             row.appendChild(cellId);
             row.appendChild(cellImie);
@@ -53,8 +39,6 @@ $(document).ready(function()
             row.appendChild(cellDataur);
             row.appendChild(cellIm);
             row.appendChild(cellNaz);
-            row.appendChild(cellUpdate);
-            row.appendChild(cellDelete);
             
             table.appendChild(row);
         }

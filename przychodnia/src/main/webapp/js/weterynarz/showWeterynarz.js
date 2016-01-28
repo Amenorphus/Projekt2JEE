@@ -22,26 +22,9 @@ $(document).ready(function()
             cellImie.appendChild(cellImieText);
             cellNazwisko.appendChild(cellNazwiskoText);
 
-           
-            var cellUpdate = document.createElement("td");
-            var cellUpdateLink = document.createElement("a");
-
-            cellUpdateLink.href = "../../przychodnia/operations/weterynarz/updateWeterynarz.html"
-            cellUpdateLink.textContent = "Edytuj";
-            cellUpdate.appendChild(cellUpdateLink);
-
-            var cellDelete = document.createElement("td");
-            var cellDeleteLink = document.createElement("a");
-
-            cellDeleteLink.href = "../../przychodnia/operations/weterynarz/deleteWeterynarz.html"
-            cellDeleteLink.textContent = "Kasuj";
-            cellDelete.appendChild(cellDeleteLink);
-
             row.appendChild(cellId);
             row.appendChild(cellImie);
             row.appendChild(cellNazwisko);
-            row.appendChild(cellUpdate);
-            row.appendChild(cellDelete);
 
             table.appendChild(row);
         }
