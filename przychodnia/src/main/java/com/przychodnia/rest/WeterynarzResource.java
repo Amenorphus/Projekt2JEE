@@ -8,6 +8,8 @@ import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import java.net.URISyntaxException;
 import java.sql.Date;
 import java.util.List;
 
@@ -31,7 +33,13 @@ public class WeterynarzResource
 
         weterynarzManager.addWeterynarz(weterynarz);
 
-        return Response.status(Response.Status.CREATED).build();
+        /*try {
+            java.net.URI location = new java.net.URI("../index.html");
+            throw new WebApplicationException(Response.temporaryRedirect(location).build());
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }*/
+        return Response.status(Response.Status.OK).build();
     }
 
     @GET
